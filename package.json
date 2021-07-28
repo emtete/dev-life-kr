@@ -6,6 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
+  "deploy": "git subtree push — prefix dist heroku master",
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
