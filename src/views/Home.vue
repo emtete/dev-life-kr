@@ -8,11 +8,26 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import axios from 'axios';
 
 @Component({
   components: {
     HelloWorld,
   },
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+  url = `post/getScrollList?userId=1`;
+
+  created() {
+    axios
+      .get(this.url)
+      .then((result) => {
+        console.log(result);
+        
+      })
+      .catch((err) => {
+        alert(err);
+      });
+  }
+}
 </script>
