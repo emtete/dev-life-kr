@@ -11,5 +11,4 @@ console.log('server started '+ port);
 // git add .
 // git commit -m "."
 // heroku buildpacks:set heroku/nodejs
-// git push heroku master
 // git subtree push --prefix dist heroku master
