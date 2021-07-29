@@ -16,9 +16,10 @@ import axios from 'axios';
   },
 })
 export default class Home extends Vue {
-  url = `post/getScrollList?userId=1`;
+  url = `https://api-dev-life-kr.herokuapp.com/post/getScrollList?userId=1&numberOfRequest=10`;
 
   created() {
+
     axios
       .get(this.url)
       .then((result) => {
