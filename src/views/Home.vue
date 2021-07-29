@@ -1,13 +1,12 @@
 <template>
   <div class="home">
+    <p>abc</p>
     <img alt="Vue logo" src="../assets/logo.png" />
-    <!-- <b-button label="Launch toast (default)" size="is-medium" @click="toast" /> -->
-    <!-- <i class="fab fa-500px"></i> -->
-    <i class="fab fa-github-square"></i>
-    <i class="fab fa-git-square"></i>
+
     <b-button size="is-small" icon-left="user">
       Add
     </b-button>
+
     <b-button size="is-small" icon-pack="fab" icon-left="font-awesome">
       Add
     </b-button>
@@ -16,12 +15,6 @@
       Add
     </b-button>
 
-    <b-icon pack="fas" icon="home" size="is-medium"> </b-icon>
-    <b-icon pack="fab" icon="fa-500px" size="is-small"> </b-icon>
-    <b-icon pack="fas" icon="user" size="is-large" type="is-success"></b-icon>
-    <!-- <b-icon pack="fa" icon="faGit" size="is-large" type="is-success"></b-icon> -->
-    <vue-fontawesome :icon="['fab', 'font-awesome']" />
-    <vue-fontawesome :icon="['fab', 'faGit']" />
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
   </div>
 </template>
@@ -55,3 +48,13 @@ export default class Home extends Vue {
   }
 }
 </script>
+
+<style lang="scss">
+.mobile {
+  .home {
+    p {
+      color: red;
+    }
+  }
+}
+</style>
