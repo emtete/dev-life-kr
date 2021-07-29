@@ -5,6 +5,6 @@
   "author": "Awesome Author",
   "private": true,
   "scripts": {
-    "postinstall": "yarn add express"
+    "postinstall": "npm install express"
   }
  }

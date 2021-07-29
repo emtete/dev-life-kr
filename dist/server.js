@@ -7,4 +7,7 @@ var port = process.env.PORT || 5000;
 app.listen(port);
 console.log('server started '+ port);
 
-//
+// heroku git:remote -a dev-life-kr
+// git add .
+// git commit -m "."
+// git push heroku master
