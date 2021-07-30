@@ -1,20 +1,7 @@
 <template>
-  <div id="index" :class="is_mobile">
+  <div id="index" :class="device">
+    {{ device }}
     <Sidebar />
-    <!-- <div class="sidebar">
-      <div class="sidebar__header">
-        <div class="sidebar__header--title">
-          DEV LIFE
-        </div>
-        <div class="sidebar__header--sub-title">
-          Front-End Web Developer
-        </div>
-        <div class="sidebar__header--manage">로그인</div>
-      </div>
-
-      <div class="sidebar__menu">
-      </div>
-    </div> -->
     <div class="body">
       <div class="header"></div>
       <div class="content">
@@ -34,8 +21,15 @@ import Sidebar from '@/components/sidebar/index.vue';
   },
 })
 export default class extends Vue {
-  get is_mobile() {
-    return window.innerWidth < 769 ? 'mobile' : '';
+  device = '';
+
+  created() {
+    const media = matchMedia('screen and (max-width: 768px)') as MediaQueryList;
+    if (media.matches) this.device = 'mobile';
+
+    media.addEventListener('change', e => {
+      this.device = e.matches ? 'mobile' : '';
+    });
   }
 }
 </script>
