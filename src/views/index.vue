@@ -1,9 +1,10 @@
 <template>
   <div id="index" :class="device">
-    {{ device }}
     <Sidebar />
     <div class="body">
-      <div class="header"></div>
+      <div class="header">
+        <Appbar />
+      </div>
       <div class="content">
         <router-view></router-view>
       </div>
@@ -13,11 +14,13 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import Sidebar from '@/components/sidebar/index.vue';
+import Sidebar from '@/components/layout/sidebar.vue';
+import Appbar from '@/components/layout/appbar.vue';
 
 @Component({
   components: {
     Sidebar,
+    Appbar,
   },
 })
 export default class extends Vue {
