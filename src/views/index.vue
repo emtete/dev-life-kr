@@ -44,6 +44,18 @@ export default class extends Vue {
   .body {
     position: absolute;
     left: 341px;
+
+    .header {
+      position: fixed;
+      width: calc(100% - 340px);
+      height: 60px;
+    }
+
+    .content {
+      position: absolute;
+      top: 60px;
+      width: calc(100% - 340px);
+    }
   }
 }
 
@@ -51,6 +63,14 @@ export default class extends Vue {
   .body {
     position: relative;
     left: 0px;
+
+    .header {
+      width: 100%;
+    }
+
+    .content {
+      width: 100%;
+    }
   }
 }
 </style>
