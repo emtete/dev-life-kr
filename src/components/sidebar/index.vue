@@ -1,97 +1,17 @@
 <template>
-  <section>
-    <b-sidebar
-      type="is-light"
-      :fullheight="fullheight"
-      :fullwidth="fullwidth"
-      :overlay="overlay"
-      :right="right"
-      v-model="open"
-    >
-      <div class="p-1">
-        <img
-          src="https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png"
-          alt="Lightweight UI components for Vue.js based on Bulma"
-        />
-        <b-menu>
-          <b-menu-list label="Menu">
-            <b-menu-item icon="information-outline" label="Info"></b-menu-item>
-            <b-menu-item icon="settings">
-              <template #label="props">
-                Administrator
-                <b-icon
-                  class="is-pulled-right"
-                  :icon="props.expanded ? 'menu-down' : 'menu-up'"
-                ></b-icon>
-              </template>
-              <b-menu-item icon="account" label="Users"></b-menu-item>
-              <b-menu-item icon="cellphone-link">
-                <template #label>
-                  Devices
-                  <b-dropdown
-                    aria-role="list"
-                    class="is-pulled-right"
-                    position="is-bottom-left"
-                  >
-                    <template #trigger>
-                      <b-icon icon="dots-vertical"></b-icon>
-                    </template>
-                    <b-dropdown-item aria-role="listitem"
-                      >Action</b-dropdown-item
-                    >
-                    <b-dropdown-item aria-role="listitem"
-                      >Another action</b-dropdown-item
-                    >
-                    <b-dropdown-item aria-role="listitem"
-                      >Something else</b-dropdown-item
-                    >
-                  </b-dropdown>
-                </template>
-              </b-menu-item>
-              <b-menu-item
-                icon="cash-multiple"
-                label="Payments"
-                disabled
-              ></b-menu-item>
-            </b-menu-item>
-            <b-menu-item icon="account" label="My Account">
-              <b-menu-item label="Account data"></b-menu-item>
-              <b-menu-item label="Addresses"></b-menu-item>
-            </b-menu-item>
-          </b-menu-list>
-          <b-menu-list>
-            <b-menu-item
-              label="Expo"
-              icon="link"
-              tag="router-link"
-              target="_blank"
-              to="/expo"
-            ></b-menu-item>
-          </b-menu-list>
-          <b-menu-list label="Actions">
-            <b-menu-item label="Logout"></b-menu-item>
-          </b-menu-list>
-        </b-menu>
+  <div id="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__header--title">
+        DEV LIFE
       </div>
-    </b-sidebar>
-    <div class="block">
-      <b-field grouped group-multiline>
-        <div class="control">
-          <b-switch v-model="overlay">Overlay</b-switch>
-        </div>
-        <div class="control">
-          <b-switch v-model="fullheight">Fullheight</b-switch>
-        </div>
-        <div class="control">
-          <b-switch v-model="fullwidth">Fullwidth</b-switch>
-        </div>
-        <div class="control">
-          <b-switch v-model="right">Right</b-switch>
-        </div>
-      </b-field>
+      <div class="sidebar__header--sub-title">
+        Front-End Web Developer
+      </div>
+      <div class="sidebar__header--manage">로그인</div>
     </div>
-    <b-button @click="open = true">Show</b-button>
-  </section>
+
+    <div class="sidebar__menu"></div>
+  </div>
 </template>
 
 <script>
@@ -108,8 +28,44 @@ export default {
 };
 </script>
 
-<style>
-.p-1 {
-  padding: 1em;
+<style lang="scss">
+#sidebar {
+  position: absolute;
+  width: 340px;
+  height: 100%;
+  background-color: #0d2b40;
+  border-right: 4px solid #48c2c9;
+
+  .sidebar__header {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .sidebar__header--title {
+      font-family: 'NotoSansKR-Regular';
+      font-size: 35px;
+      color: white;
+    }
+
+    .sidebar__header--sub-title {
+      font-family: 'NotoSansKR-Light';
+      font-size: 20px;
+      color: rgb(200, 200, 200);
+    }
+
+    .sidebar__header--manage {
+      font-family: 'NotoSansKR-Regular';
+      font-size: 15px;
+      color: white;
+      margin-top: 50px;
+    }
+  }
+}
+
+.mobile {
+  #sidebar {
+    display: none;
+  }
 }
 </style>
