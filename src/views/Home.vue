@@ -1,8 +1,18 @@
 <template>
-  <div class="home">
+  <div id="home">
     <p>abc</p>
-    <img alt="Vue logo" src="../assets/logo.png" />
-
+    <div style="display: flex; flex-direction: column">
+      <img alt="Vue logo" src="../assets/logo.png" />
+      <img alt="Vue logo" src="../assets/logo.png" />
+      <img alt="Vue logo" src="../assets/logo.png" />
+      <img alt="Vue logo" src="../assets/logo.png" />
+      <img alt="Vue logo" src="../assets/logo.png" />
+      <img alt="Vue logo" src="../assets/logo.png" />
+      <img alt="Vue logo" src="../assets/logo.png" />
+      <img alt="Vue logo" src="../assets/logo.png" />
+      <img alt="Vue logo" src="../assets/logo.png" />
+      <img alt="Vue logo" src="../assets/logo.png" />
+    </div>
     <b-button size="is-small" icon-left="user">
       Add
     </b-button>
@@ -56,5 +66,14 @@ export default class Home extends Vue {
       color: red;
     }
   }
+}
+
+#home {
+  /* width: 100%; */
+  display: flex;
+  /* flex-direction: column; */
+  /* height: auto; */
+  /* max-height: calc(100% - 60px); */
+  /* overflow-y: auto; */
 }
 </style>

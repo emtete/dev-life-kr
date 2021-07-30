@@ -4,7 +4,22 @@
       <p></p>
       <b-button @click="open_menu" size="is-default" :icon-left="menu_icon" />
     </div>
-    <div class="appbar__menu"></div>
+    <div class="appbar__menu">
+      <b-collapse
+        aria-id="contentIdForA11y2"
+        class="panel"
+        animation="slide"
+        v-model="isOpen"
+      >
+        <div class="panel-block">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
+          Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius
+          lectus, nec rutrum justo nibh eu lectus. <br />
+          Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel,
+          interdum mattis neque.
+        </div>
+      </b-collapse>
+    </div>
   </div>
 </template>
 
@@ -17,16 +32,21 @@ import { Component, Vue } from 'vue-property-decorator';
 export default class extends Vue {
   isActive = true;
   menu_icon: 'times' | 'list' = 'list';
+  isOpen = false;
 
   open_menu() {
     this.menu_icon = this.menu_icon === 'list' ? 'times' : 'list';
+    this.isOpen = !this.isOpen;
   }
 }
 </script>
 
 <style lang="scss">
 #appbar {
-  height: 100%;
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  /* background-color: ; */
 
   .appbar__header {
     box-shadow: 0px 2px 2px gray;
