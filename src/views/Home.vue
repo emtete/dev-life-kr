@@ -1,7 +1,7 @@
 <template>
   <div id="home">
     <p>abc</p>
-    <div style="display: flex; flex-direction: column">
+    <!-- <div style="display: flex; flex-direction: column">
       <img alt="Vue logo" src="../assets/logo.png" />
       <img alt="Vue logo" src="../assets/logo.png" />
       <img alt="Vue logo" src="../assets/logo.png" />
@@ -12,7 +12,7 @@
       <img alt="Vue logo" src="../assets/logo.png" />
       <img alt="Vue logo" src="../assets/logo.png" />
       <img alt="Vue logo" src="../assets/logo.png" />
-    </div>
+    </div> -->
     <b-button size="is-small" icon-left="user">
       Add
     </b-button>
@@ -53,9 +53,9 @@ export default class Home extends Vue {
       });
   }
 
-  toast() {
-    this.$buefy.toast.open('Something happened');
-  }
+  // toast() {
+  //   this.$buefy.toast.open('Something happened');
+  // }
 }
 </script>
 
