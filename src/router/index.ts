@@ -15,14 +15,14 @@ const routes: Array<RouteConfig> = [
   {
     path: '/',
     redirect: 'home',
-    component: () => import('../views/index.vue'),
+    component: () => import('@/views/index.vue'),
     children: [
       {
         path: 'home',
         meta: {
           title: 'home',
         },
-        component: () => import('../views/Home.vue'),
+        component: () => import('@/views/Home.vue'),
       },
       {
         path: 'about',
