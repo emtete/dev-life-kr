@@ -14,7 +14,7 @@ VueRouter.prototype.push = function push(
 const routes: Array<RouteConfig> = [
   {
     path: '/',
-    name: 'Home',
+    name: 'index',
     redirect: 'home',
     component: () => import('../views/index.vue'),
     children: [

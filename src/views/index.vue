@@ -28,7 +28,7 @@
               </div>
               <div class="appbar__dropdown--manage">로그인</div>
 
-              <b-menu>
+              <!-- <b-menu>
                 <b-menu-list>
                   <b-menu-item label="Info"></b-menu-item>
                   <b-menu-item :active="isActive" expanded>
@@ -56,7 +56,7 @@
                     to="/expo"
                   ></b-menu-item>
                 </b-menu-list>
-              </b-menu>
+              </b-menu> -->
             </div>
           </div>
         </b-collapse>
